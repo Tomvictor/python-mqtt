@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2b4fb29c-4747-4a45-8fbe-0d573b848a62" name="mqtt" url="http://iot.buildfromzero.com">
+        <fileTransfer host="Technoripio.cloudapp.net" port="22" rootFolder="/home/technorip" accessType="SFTP" username="technorip">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
