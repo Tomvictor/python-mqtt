@@ -1,4 +1,5 @@
 import paho.mqtt.client as mqtt
+import requests
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
@@ -14,10 +15,9 @@ def on_connect(client, userdata, flags, rc):
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
     print("message recieved")
-    print(client)
-    print(userdata)
-    print(msg)
     print(msg.topic+" "+str(msg.payload))
+    #r = requests.get('https://iot.buildfromzero.com/store?q='+ msg.payload + '&t=' + msg.topic)
+    print("https://iot.buildfromzero.com/store?q=",str(msg.payload))
 
 client = mqtt.Client()
 client.on_connect = on_connect
